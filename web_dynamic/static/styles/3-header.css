@@ -9,3 +9,14 @@ header .logo {
     left: 20px;
     height: 100%;
 }
+
+#api_status {
+    display: inline;
+    float: right;
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+    vertical-align: center;
+}
