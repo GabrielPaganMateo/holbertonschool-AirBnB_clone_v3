@@ -53,6 +53,17 @@ $(document).ready(function() {
         data: JSON.stringify({}),
         success: function(response) {
           console.log("Success:", response);
+          response.sort(function(a, b) {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+                return -1
+            }
+            if (nameA > nameB) {
+                return 1
+            }
+            return 0
+            })
           for (const place of response) {
             $(".places").append(`
             <article>
