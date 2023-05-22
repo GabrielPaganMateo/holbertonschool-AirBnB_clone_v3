@@ -1,10 +1,14 @@
 # AirBnB Clone <div id="badges"> <a href="https://www.linkedin.com/in/gabriel-pagan-232570254/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/></a>
-#### Deployment (Execute the following commands, one after the other):
-    
-    mysql -u root -p hbnb_dev_db < setup_mysql_dev.sql
-
+#### Deployment:
+    1) Add data to MySQL:
+    cat 100-dump.sql | mysql -uroot -p
+    2) Run API server:
     HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db HBNB_API_PORT=5001 python3 -m api.v1.app
+    3) Run website server:
     HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_dynamic.4-hbnb
+    
+
+![Alt text](CloneAir.png "Optional title")
   
 # The Console 
 The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of AirBnB project is to eventually deploy our server a simple copy of the AirBnB Website(HBnB). A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
