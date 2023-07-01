@@ -60,7 +60,6 @@ def delete_review(review_id):
 
 @app_views.route('/places/<place_id>/reviews', methods=['POST'],
                  strict_slashes=False)
-@swag_from('documentation/reviews/post_reviews.yml', methods=['POST'])
 def post_review(place_id):
     """
     Creates a Review
